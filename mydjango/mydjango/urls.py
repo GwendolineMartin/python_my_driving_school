@@ -17,5 +17,6 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    # path('', admin.site.urls), c'est un test!
     path('admin/', admin.site.urls),
 ]
