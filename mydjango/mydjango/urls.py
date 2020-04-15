@@ -21,10 +21,12 @@ from . import views
 from .import views
 
 urlpatterns = [
-    path('', views.home),  # c'est la page home
+    path('', views.home),  # c'est la page home, ici j'appelle un template
+    # cette page est bonne, interface admin via superuser
     path('admin/', admin.site.urls),
+    # il faut changer par une application "planing, rdv ou autres..."
     path('secretary/', include('secretary.urls')),
-    # path('admin/', include('admin.urls')), je suis en test, a voir si je tej ou pas :)
+
 
 ]
 
