@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import include, path
 from . import views
 
-#from .import views
+from .import views
 
 urlpatterns = [
-    path('', views.home),  # c'est un test!
+    path('', views.home),  # c'est la page home
     path('admin/', admin.site.urls),
     path('secretary/', include('secretary.urls')),
     # path('admin/', include('admin.urls')), je suis en test, a voir si je tej ou pas :)
