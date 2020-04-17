@@ -24,10 +24,7 @@ urlpatterns = [
     path('', views.home),  # c'est la page home, ici j'appelle un template
     # cette page est bonne, interface admin via superuser
     path('admin/', admin.site.urls),
-    # il faut changer par une application "planing, rdv ou autres..."
-    path('secretary/', include('secretary.urls')),
-
-
+    path('intra/', include('intra.urls')),
 ]
 
 if settings.DEBUG:
