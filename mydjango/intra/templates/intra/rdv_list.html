@@ -11,7 +11,7 @@
             {% for rdv in rdvs %}
               <div>
                
-                <p>étudiant : <a href="{% url 'rdv_detail' pk=rdv.pk %}">{{rdv.id_student}}</a></p>
+                <p >étudiant : <a style="color: #000" href="{% url 'rdv_detail' pk=rdv.pk %}">{{rdv.id_student}}</a></p>
               </div>
               <br>
             {% endfor %}
