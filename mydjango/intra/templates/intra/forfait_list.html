@@ -1,0 +1,26 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+
+<html>
+    <head>
+        <title>Merguez auto école</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Merguez auto école</a></h1>
+        </div>
+
+        <div>
+            {% for forfait in forfaits %}
+              <div>
+               
+                <p>étudiant : <a href="{% url 'forfait_detail' pk=forfait.pk %}">{{forfait.id_student}}</a></p>
+              </div>
+              <br>
+            {% endfor %}
+        </div>
+    </body>
+</html>
+{% endblock %}
+

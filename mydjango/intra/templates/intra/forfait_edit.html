@@ -1,0 +1,12 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+    <h2>New forfait</h2>
+            <p>Formulaire edit</p>
+
+    <form method="POST" class="forfait-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+

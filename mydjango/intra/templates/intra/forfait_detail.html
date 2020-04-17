@@ -1,0 +1,16 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+    <div class="forfait">
+          <p>Formulaire détail</p>
+          <h1>{{forfait.id_student}}</h1>
+          <p>lieu : {{forfait.lieu}}</p>
+          <p>heure : {{forfait.start_time}} - {{forfait.end_time}}</p>
+          <p>moniteur : {{forfait.id_instructor}}</p>
+      <!--{% if user.is_authenticated %}-->
+          <a class="btn btn-default" href="{% url 'forfait_edit' pk=forfait.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a class="btn btn-default" href="{% url 'forfait_remove' pk=forfait.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+      <!--{% endif %}-->        
+      
+    </div>
+{% endblock %}
