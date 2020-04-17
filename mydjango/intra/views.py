@@ -28,7 +28,7 @@ def rdv_create(request):
         if form.is_valid():
             rdv = form.save()
             rdv.save()
-            return redirect('rdv_detail.html', pk=rdv.pk)
+            return redirect('rdv_dedirectTo', pk=rdv.pk)
     else:
         form = RdvForm()
     return render(request, 'intra/rdv_edit.html', {'form': form})
