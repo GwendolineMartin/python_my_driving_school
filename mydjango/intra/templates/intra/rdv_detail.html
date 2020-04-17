@@ -1,0 +1,16 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+    <div class="rdv">
+          <p>Formulaire détail</p>
+          <h1>{{rdv.id_student}}</h1>
+          <p>lieu : {{rdv.lieu}}</p>
+          <p>heure : {{rdv.start_time}} - {{rdv.end_time}}</p>
+          <p>moniteur : {{rdv.id_instructor}}</p>
+      <!--{% if user.is_authenticated %}-->
+          <a class="btn btn-default" href="{% url 'rdv_edit' pk=rdv.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a class="btn btn-default" href="{% url 'rdv_remove' pk=rdv.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+      <!--{% endif %}-->        
+      
+    </div>
+{% endblock %}

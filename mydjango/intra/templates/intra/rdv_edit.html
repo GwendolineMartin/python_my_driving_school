@@ -1,0 +1,12 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+    <h2>New rdv</h2>
+            <p>Formulaire edit</p>
+
+    <form method="POST" class="rdv-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+

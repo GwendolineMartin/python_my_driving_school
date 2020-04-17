@@ -1,22 +1,26 @@
+{% extends 'intra/base.html' %}
+
+{% block content %}
+
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Merguez auto école</title>
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1><a href="/">Merguez auto école</a></h1>
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Mon second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+            {% for rdv in rdvs %}
+              <div>
+               
+                <p>étudiant : <a href="{% url 'rdv_detail' pk=rdv.pk %}">{{rdv.id_student}}</a></p>
+              </div>
+              <br>
+            {% endfor %}
         </div>
     </body>
 </html>
+{% endblock %}
+
