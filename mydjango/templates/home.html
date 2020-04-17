@@ -1,15 +1,69 @@
-<h1>Merguez auto école</h1>
 
-<form action="" method="post">
+<html>
+<section id="connexion">
+  <form  action="" method="post" class="contact-form"></form>
+  {% block title %}
+  <h1 class="title">Merguez Auto Ecole</h1>
+  {% endblock %}
   <div>
-    <label for="name">Login :</label>
-    <input type="text" id="name" name="user_name">
+    <label for="name"></label>
+    <input type="text" id="name" placeholder="login" name="user_name">
   </div>
   <div>
-    <label for="mail">Mot de passe :</label>
-    <input type="password" id="mail" name="user_mail">
+    <label for="mail"></label>
+    <input type="password" id="mail" placeholder="password" name="user_mail">
   </div>
   <div class="button">
     <button type="submit">Envoyer</button>
   </div>
 </form>
+</section>
+
+<style>
+
+  button {
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 30px;
+    border: 1.2px solid #eb4d4b;
+    background: none;
+    color: #666;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #connexion {
+    padding: 7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title{
+    font-family:sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  input{
+  background: white;
+  border: 0;
+  border-bottom:1px solid #666;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #eb4d4b;
+  outline: 0;
+  margin-bottom: 1rem;
+  }
+
+  .contact-form{
+   max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
+</html>

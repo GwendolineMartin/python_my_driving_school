@@ -2,25 +2,66 @@
 
 <html>
     <head>
-        <title>Django Girls blog</title>
+        {% block title %}
+        <title>Merguez Auto Ecole</title>
+        {% endblock %}
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     </head>
     <body>
-    <div class="page-header">
+        <header>
+            <h3><a href="/">&#8592;</a></h3>
 
-        <h1><a href="/">Django Girls Blog</a></h1>
-            <a href="{% url 'rdv_create' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+           <div class="container">
+        <h1 class="logo"><a class ="logo" href="/">Merguez Auto Ecole</a></h1>
+        <a href="{% url 'rdv_create' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+         </div>
+         </header>
             {% block content %}
             {% endblock %}
             </div>
         </div>
-    </div>
 </body>
 </html>
+
+<style> 
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #eb4d4b;
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      margin-left: 2rem;
+      color: white;
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+    }
+
+    .top-menu {
+        color: white;
+
+    }
+    .container {
+        padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    }
+    a {
+        color: white;
+        margin-left: 3rem;
+
+    }
+   
+   
+    
+    </style>
